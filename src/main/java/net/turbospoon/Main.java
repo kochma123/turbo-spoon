@@ -31,8 +31,8 @@ public class Main {
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		//ModBlocks.init();
-		//ModItems.init();
+		ModBlocks.init();
+		ModItems.init();
 	}
 
 	@Mod.EventHandler
