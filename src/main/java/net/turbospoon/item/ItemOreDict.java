@@ -1,5 +1,5 @@
 package net.turbospoon.item;
 
-public class ItemOreDict {
-
+public interface ItemOreDict {
+	void initOreDict();
 }
