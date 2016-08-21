@@ -23,7 +23,7 @@ public class Main {
 	@Mod.Instance(modId)
 	public static Main instance;
 
-	@SidedProxy(serverSide = "net.turbospoon.CommonProxy", clientSide = "net.turbospoon.proxy.ClientProxy")
+	@SidedProxy(serverSide = "net.turbospoon.proxy.CommonProxy", clientSide = "net.turbospoon.proxy.ClientProxy")
 	public static CommonProxy proxy;
 
 	public static final TurboSpoonTab creativeTab = new TurboSpoonTab();
