@@ -7,11 +7,13 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.turbospoon.block.ModBlocks;
 import net.turbospoon.client.TurboSpoonTab;
 import net.turbospoon.item.ModItems;
 import net.turbospoon.proxy.CommonProxy;
 import net.turbospoon.recipe.ModRecipes;
+import net.turbospoon.world.ModWorldGen;
 
 @Mod(modid = Main.modId, name = Main.name, version = Main.version, acceptedMinecraftVersions = "[1.10.2]")
 public class Main {
@@ -44,6 +46,7 @@ public class Main {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		ModRecipes.init();
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
 	}
 
 	@Mod.EventHandler
