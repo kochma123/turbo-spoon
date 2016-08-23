@@ -20,6 +20,7 @@ public class ModItems {
 	public static ItemShovel copperShovel;
 	public static ItemAxe copperAxe;
 	public static ItemHoe copperHoe;
+	public static ItemBase trap;
 	
 	// Actually adds the items here
 	public static void init() {
@@ -31,6 +32,7 @@ public class ModItems {
 		copperShovel = register(new ItemShovel(Main.copperMaterial, "copperShovel"));
 		copperAxe = register(new ItemAxe(Main.copperMaterial, "copperAxe"));
 		copperHoe = register(new ItemHoe(Main.copperMaterial, "copperHoe"));
+		trap = register(new ItemBase("trap"));
 	}
 
 	private static <T extends Item> T register(T item) {
