@@ -1,6 +1,7 @@
 package net.turbospoon;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -10,6 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.turbospoon.block.ModBlocks;
 import net.turbospoon.client.TurboSpoonTab;
+import net.turbospoon.drops.ModDropHandler;
 import net.turbospoon.item.ModItems;
 import net.turbospoon.proxy.CommonProxy;
 import net.turbospoon.recipe.ModRecipes;
@@ -47,6 +49,7 @@ public class Main {
 	public void init(FMLInitializationEvent event) {
 		ModRecipes.init();
 		GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
+		MinecraftForge.EVENT_BUS.register(new ModDropHandler());
 	}
 
 	@Mod.EventHandler
