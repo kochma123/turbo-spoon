@@ -18,7 +18,7 @@ public class Main {
 
 	public static final String modId = "turbospoon";
 	public static final String name = "Turbo Spoon";
-	public static final String version = "0.0.3";
+	public static final String version = "0.0.0";
 
 	@Mod.Instance(modId)
 	public static Main instance;
