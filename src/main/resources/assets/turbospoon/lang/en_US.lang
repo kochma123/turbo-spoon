@@ -1,0 +1,18 @@
+# Items
+item.ingotCopper.name=Copper Ingot
+item.corn.name=Corn
+item.cornSeed.name=Corn Seed
+item.copperSword.name=Copper Sword
+item.copperPickaxe.name=Copper Pickaxe
+item.copperAxe.name=Copper Axe
+item.copperShovel.name=Copper Shovel
+item.copperHoe.name=Copper Hoe
+item.trap.name=Trap
+
+# Blocks
+tile.oreCopper.name=Copper Ore
+tile.pedestal.name=Pedestal
+tile.something.name=Something
+
+# Misc
+itemGroup.turbospoon=Turbo Spoon

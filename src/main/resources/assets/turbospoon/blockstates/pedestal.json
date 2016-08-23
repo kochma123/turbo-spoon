@@ -1,0 +1,12 @@
+{
+	"forge_marker": 1,
+	"variants": {
+		"normal": {
+			"model": "turbospoon:pedestal"
+		},
+		"inventory": {
+			"model": "turbospoon:pedestal",
+			"transform": "forge:default-block"
+		}
+	}
+}

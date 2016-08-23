@@ -1,0 +1,16 @@
+[
+{
+  "modid": "turbospoon",
+  "name": "Turbo Spoon",
+  "description": "A mod of everything",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["kocham123","CptnFuzzyPants"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
