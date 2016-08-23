@@ -11,7 +11,6 @@ public class BlockOre extends BlockBase implements ItemOreDict {
 
 	public BlockOre(String name, String oreName) {
 		super(Material.ROCK, name);
-
 		this.oreName = oreName;
 
 		setHardness(3f);
