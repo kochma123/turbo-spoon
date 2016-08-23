@@ -19,6 +19,11 @@ public class BlockBase extends Block implements ItemModelProvider {
 		setCreativeTab(Main.creativeTab);
 	}
 
+	public BlockBase setHardness(float hardness){
+		super.setHardness(hardness);
+		return this;
+	}
+	
 	@Override
 	public void registerItemModel(Item item) {
 		Main.proxy.registerItemRenderer(item, 0, name);

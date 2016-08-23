@@ -19,7 +19,7 @@ public class ModBlocks {
 		oreCopper = register(new BlockOre("oreCopper", "oreCopper"));
 		cropCorn = register(new BlockCropCorn(), null);
 		pedestal = register(new BlockPedestal());
-		something = register(new BlockBase(Material.WOOD,"something"));
+		something = register(new BlockSomething(Material.WOOD,"something").setHardness(5f));
 	}
 
 	private static <T extends Block> T register(T block, ItemBlock itemBlock) {
