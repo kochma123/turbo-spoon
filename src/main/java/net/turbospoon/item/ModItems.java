@@ -11,6 +11,7 @@ import net.turbospoon.item.tool.ItemSword;
 
 public class ModItems {
 
+	// references to the items we are adding
 	public static ItemBase ingotCopper;
 	public static ItemCorn corn;
 	public static ItemCornSeed cornSeed;
@@ -20,6 +21,7 @@ public class ModItems {
 	public static ItemAxe copperAxe;
 	public static ItemHoe copperHoe;
 	
+	// Actually adds the items here
 	public static void init() {
 		ingotCopper = register(new ItemOre("ingotCopper", "ingotCopper"));
 		corn = register(new ItemCorn());

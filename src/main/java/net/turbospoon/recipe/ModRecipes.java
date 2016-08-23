@@ -12,10 +12,15 @@ public class ModRecipes {
 
 	public static void init() {
 //		Shapeless Crafting
+//		addShapelessRecipe(ItemStack output, Item/Block/ItemStack.. inputs)
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.cornSeed), ModItems.corn);
-		GameRegistry.addShapedRecipe(new ItemStack(Items.RABBIT_STEW), " R ", "CPM", " B ", 'R', Items.COOKED_RABBIT, 'C', ModItems.corn, 'P', Items.BAKED_POTATO, 'M', Blocks.BROWN_MUSHROOM, 'B', Items.BOWL);
 		
 //		Shaped Crafting
+//		addShapedRecipe(ItemStack output, String firstRow,String secondRow , String thridRow, (char,Item/Block/ItemStack))
+		GameRegistry.addShapedRecipe(new ItemStack(Items.RABBIT_STEW), " R ", "CPM", " B ", 'R', Items.COOKED_RABBIT, 'C', ModItems.corn, 'P', Items.BAKED_POTATO, 'M', Blocks.BROWN_MUSHROOM, 'B', Items.BOWL);
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.copperPickaxe), "CCC"," S "," S ",'C',ModItems.ingotCopper,'S',Items.STICK);
+
+//		Recipe (similar to shaped crafting but can start on any line)
 		GameRegistry.addRecipe(new ShapedOreRecipe(Items.BUCKET, "I I", " I ", 'I', "ingotCopper"));
 
 //		Smelting

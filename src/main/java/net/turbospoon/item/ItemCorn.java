@@ -8,6 +8,9 @@ import net.turbospoon.Main;
 public class ItemCorn extends ItemFood implements ItemModelProvider, ItemOreDict {
 
 	public ItemCorn() {
+		//1. Amount of food restored
+		//2. Saturation given
+		//3. Edible by wolves
 		super(3, 0.6f, false);
 		setUnlocalizedName("corn");
 		setRegistryName("corn");
@@ -23,5 +26,4 @@ public class ItemCorn extends ItemFood implements ItemModelProvider, ItemOreDict
 	public void initOreDict() {
 		OreDictionary.registerOre("cropCorn", this);
 	}
-
 }

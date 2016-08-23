@@ -1,7 +1,6 @@
 package net.turbospoon.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.turbospoon.item.ItemModelProvider;
@@ -13,6 +12,7 @@ public class ModBlocks {
 	public static BlockCropCorn cropCorn;
 	public static BlockBase pedestal;
 
+	//Actually adds the blocks to the game
 	public static void init() {
 		oreCopper = register(new BlockOre("oreCopper", "oreCopper"));
 		cropCorn = register(new BlockCropCorn(), null);
@@ -33,7 +33,6 @@ public class ModBlocks {
 				((ItemOreDict)itemBlock).initOreDict();
 			}
 		}
-
 		return block;
 	}
 
@@ -42,5 +41,4 @@ public class ModBlocks {
 		itemBlock.setRegistryName(block.getRegistryName());
 		return register(block, itemBlock);
 	}
-
 }

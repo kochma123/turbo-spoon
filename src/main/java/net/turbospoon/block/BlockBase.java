@@ -13,12 +13,9 @@ public class BlockBase extends Block implements ItemModelProvider {
 
 	public BlockBase(Material material, String name) {
 		super(material);
-
 		this.name = name;
-
 		setUnlocalizedName(name);
 		setRegistryName(name);
-
 		setCreativeTab(Main.creativeTab);
 	}
 
@@ -32,5 +29,4 @@ public class BlockBase extends Block implements ItemModelProvider {
 		super.setCreativeTab(tab);
 		return this;
 	}
-
 }
