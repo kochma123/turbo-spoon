@@ -1,6 +1,7 @@
 package net.turbospoon;
 
 import net.minecraft.item.Item;
+import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
@@ -11,18 +12,25 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.turbospoon.block.ModBlocks;
 import net.turbospoon.client.TurboSpoonTab;
+import net.turbospoon.config.DimensionsConfig;
 import net.turbospoon.drops.ModDropHandler;
 import net.turbospoon.item.ModItems;
 import net.turbospoon.proxy.CommonProxy;
 import net.turbospoon.recipe.ModRecipes;
 import net.turbospoon.world.ModWorldGen;
+import net.turbospoon.dimensions.WorldProviderDimension;
 
 @Mod(modid = Main.modId, name = Main.name, version = Main.version, acceptedMinecraftVersions = "[1.10.2]")
 public class Main {
+	
+	public static Main INSTANCE;
 
 	public static final String modId = "turbospoon";
 	public static final String name = "Turbo Spoon";
 	public static final String version = "0.0.0";
+	
+	public DimensionsConfig config;
+	//public DimensionType OurDimension;
 
 	// reference to our mod
 	@Mod.Instance(modId)
@@ -42,6 +50,9 @@ public class Main {
 	public void preInit(FMLPreInitializationEvent event) {
 		ModBlocks.init();
 		ModItems.init();
+		config = new DimensionsConfig();
+		config.preInit(event);
+		//OurDimension = DimensionType.register("TestDimension", "Test", "turbospoon".hashCode(), WorldProviderDimension.class, true);
 	}
 
 	// Recipes and mod drops get added here
