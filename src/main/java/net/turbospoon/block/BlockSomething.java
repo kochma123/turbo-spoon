@@ -1,6 +1,6 @@
 package net.turbospoon.block;
 
-import java.util.Random;
+import java.util.*;
 
 import javax.annotation.Nullable;
 
@@ -14,8 +14,11 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.turbospoon.dimensions.OurDimension;
 
 public class BlockSomething extends BlockBase {
+	
+	public int test=0;
 
 	public BlockSomething(Material material, String name) {
 		super(material, name);
@@ -33,8 +36,9 @@ public class BlockSomething extends BlockBase {
 	
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
     {
-		playerIn.displayGUIChest(playerIn.getInventoryEnderChest());
-		System.out.println("It works!");
+		test++;
+		OurDimension.CreateDimension(playerIn, test);
         return true;
     }
+	
 }
