@@ -1,7 +1,6 @@
 package net.turbospoon;
 
 import net.minecraft.item.Item;
-import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
@@ -18,7 +17,6 @@ import net.turbospoon.item.ModItems;
 import net.turbospoon.proxy.CommonProxy;
 import net.turbospoon.recipe.ModRecipes;
 import net.turbospoon.world.ModWorldGen;
-import net.turbospoon.dimensions.WorldProviderDimension;
 
 @Mod(modid = Main.modId, name = Main.name, version = Main.version, acceptedMinecraftVersions = "[1.10.2]")
 public class Main {
@@ -27,7 +25,7 @@ public class Main {
 
 	public static final String modId = "turbospoon";
 	public static final String name = "Turbo Spoon";
-	public static final String version = "0.0.0";
+	public static final String version = "@VERSION@";
 	
 	public DimensionsConfig config;
 	//public DimensionType OurDimension;
