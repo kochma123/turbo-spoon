@@ -38,21 +38,30 @@ public class OurDimension {
 		} 
 		if (test == 2) {
 			if (playerIn instanceof EntityPlayerMP) {
-				System.out.println("[HEALTHY]: Player is MP");
 				FMLCommonHandler part1 = FMLCommonHandler.instance();
-				System.out.println("[HEALTHY]: FMLCommonHandler.instance()");
 				MinecraftServer part2 = part1.getMinecraftServerInstance();
-				System.out.println("[HEALTHY]: getMinecraftServerInstance()");
 				PlayerList part3 = part2.getPlayerList();
-				System.out.println("[HEALTHY]: getPlayerList()");
-				System.out.println("playerIn - " + (EntityPlayerMP)playerIn);
-				System.out.println("Freeid - " + Freeid);
 				part3.transferPlayerToDimension((EntityPlayerMP)playerIn, 10, new OurTeleporter((WorldServer)part2.getEntityWorld()));
 				System.out.println("[HEALTHY]: changePlayerDimension");
-				//	FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList().changePlayerDimension((EntityPlayerMP) playerIn,
-				//			Freeid);
 			} else {
 				System.out.println("[ERROR]: I dont't know how this happened. But you're not a player");
+			}
+		} else if (test != 1) {
+			int here = playerIn.dimension;
+			if (here == 10 && playerIn instanceof EntityPlayerMP) {
+				FMLCommonHandler part1 = FMLCommonHandler.instance();
+				MinecraftServer part2 = part1.getMinecraftServerInstance();
+				PlayerList part3 = part2.getPlayerList();
+				part3.transferPlayerToDimension((EntityPlayerMP)playerIn, 0, new OurTeleporter((WorldServer)part2.getEntityWorld()));
+				System.out.println("[HEALTHY]: changePlayerDimension");
+			} else if (playerIn instanceof EntityPlayerMP) {
+				FMLCommonHandler part1 = FMLCommonHandler.instance();
+				MinecraftServer part2 = part1.getMinecraftServerInstance();
+				PlayerList part3 = part2.getPlayerList();
+				part3.transferPlayerToDimension((EntityPlayerMP)playerIn, 10, new OurTeleporter((WorldServer)part2.getEntityWorld()));
+				System.out.println("[HEALTHY]: changePlayerDimension");
+			} else {
+				System.out.println("[WARN]: SP, Should work after");
 			}
 		}
 		return true;
