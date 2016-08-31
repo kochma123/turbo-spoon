@@ -43,7 +43,7 @@ public class Main {
 	// Adds new materials to be used in crafting recipes
 	public static final Item.ToolMaterial copperMaterial = EnumHelper.addToolMaterial("COPPER", 2, 500, 6, 2, 14);
 
-	// Blocks and items get added here
+	// Config stuff is here
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		ModBlocks.init();
@@ -51,18 +51,21 @@ public class Main {
 		config = new DimensionsConfig();
 		config.preInit(event);
 		//OurDimension = DimensionType.register("TestDimension", "Test", "turbospoon".hashCode(), WorldProviderDimension.class, true);
+		
 	}
 
-	// Recipes and mod drops get added here
+	// Loading the mod
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		ModRecipes.init();
 		GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
 		MinecraftForge.EVENT_BUS.register(new ModDropHandler());
+		MinecraftForge.EVENT_BUS.register(new EventListener());
 	}
 
+	// modsLoaded
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-
+		proxy.init();
 	}
 }

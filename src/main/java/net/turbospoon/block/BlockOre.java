@@ -27,5 +27,4 @@ public class BlockOre extends BlockBase implements ItemOreDict {
 		super.setCreativeTab(tab);
 		return this;
 	}
-
 }
